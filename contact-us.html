@@ -1,0 +1,356 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>البنك الالكترونى المصري</title>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link type="image/x-icon" rel="shortcut icon" href="http://www.ebank.esy.es/login/m.ico"></head>
+<body style="
+    color: #73879C;
+    background: #2A3F54;
+    background-image: linear-gradient(rgba(255,255,255,.05) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.04) 2px, transparent 2px), linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(0deg, rgba(0, 0, 0, 0) 0, transparent 100px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px, 100% 100%;
+    ">
+
+
+	<style>
+	
+	/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+	text-align:center;
+	
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/** Styles */
+
+body {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666;
+    background: #fff;
+    font-family: Arial, Helvetica, 'Helvetica Neue', Verdana, sans-serif;
+}
+
+.wrapper {
+    width: 450px;
+    margin: 40px auto;
+    padding: 24px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/** Contact Form **/
+
+#contact-wrapper {
+    position: relative;
+    display: block;
+}
+
+.form-wrapper {
+    float: right;
+    width: 500px;
+    position: relative;
+	left: 50px;
+}
+
+.address-wrapper {
+    float: left;
+    width: 280px;
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+    color: #999;
+    background: rgba(14, 26, 29, 0.18);
+    margin-top: 60px;
+}
+
+
+#contact-wrapper h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 9px 0;
+    letter-spacing: -1px;
+    color: #bc7f57;
+    font-weight: bold;
+    /* direction: rtl; */
+    text-align: center;
+}
+
+#contact-wrapper h2.success {
+    color: #5791fc;
+}
+
+p.success {
+    font-size: 16px;
+    color: #666;
+}
+ 
+
+  .submit input {
+    width: 260px;
+    text-align: center;
+    padding: 6px;
+    color: #aaa;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    background: -webkit-gradient(linear, left top, left 30, from(#f1f1f1), color-stop(4%, #ffffff), to(#f4f4f4));
+    background: -moz-linear-gradient(top, #f1f1f1, #ffffff 1px, #f4f4f4 30px);
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 4px #ddd;
+    -moz-box-shadow: 0px 1px 4px #ddd;
+    text-shadow: 1px 1px 0px #fff;
+    display: block;
+    margin: 12px 0;
+    text-align: center;
+    cursor: pointer;
+    float:right;
+}
+
+.submit input{
+    padding: 6px 3px;
+    margin-right:5px;
+    height: 36px;
+    cursor: pointer;
+    width: 96px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    background: -webkit-gradient(linear, left top, left 30, from(#f1f1f1), color-stop(4%, #ffffff), to(#f4f4f4));
+    background: -moz-linear-gradient(top, #f1f1f1, #ffffff 1px, #f4f4f4 30px);
+    border: 1px solid #ccc;
+    font-weight:bold;
+    color:#666;
+	float: left;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+     
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    color:#666;
+    background: rgb(35, 53, 70);
+}
+#company-street-address{
+    display:none;
+}
+/** Form Styles **/
+input, textarea, select {
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+    width: 335px;
+    padding: 8px 6px;
+    margin: 0;
+    color: #666;
+   /**** text-shadow: 0 0 1px #FFFFFF;*****/
+    border: 1px solid rgba(73, 93, 122, 0.47);
+    outline: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: -webkit-gradient(linear, left top, left 15, from(rgba(38, 50, 59, 0.48)),
+	color-stop(4%, rgba(25, 52, 55, 0.36)), to(rgba(31, 64, 83, 0.34)));
+    background: -webkit-gradient(linear, left top, left 15, from(rgba(17, 87, 113, 0.54)),
+	color-stop(4%, rgba(39, 84, 102, 0.5)), to(rgba(32, 55, 69, 0.45)));
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+	    direction: rtl;
+}
+
+input {
+    height: 16px;
+}
+
+select {
+    width: 348px;
+    padding: 6px 6px;
+    background: rgba(33, 56, 72, 0.52);
+}
+ 
+
+
+textarea {
+    width: 335px;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, left 15, from(rgba(17, 87, 113, 0.54)),
+	color-stop(4%, rgba(39, 84, 102, 0.5)), to(rgba(32, 55, 69, 0.45)));
+    background: -moz-linear-gradient(top, #FFFFFF, #f4f4f4 1px, #FFFFFF 15px);
+
+}
+
+input:focus, textarea:focus, select:focus {
+    -webkit-box-shadow: 0px 0px 5px #007eff;
+    -moz-box-shadow: 0px 0px 5px #007eff;
+    box-shadow: 0px 0px 5px #007eff;
+}
+
+
+
+.field {
+    margin: 18px 0;
+    position: relative;
+    width: 490px;
+    clear:both;
+}
+
+label {
+    display: block;
+    width: 118px;
+    padding: 0 18px 0 0;
+    float: right;
+    color: #666;
+    text-align: center;
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+}
+ 
+
+ 
+	
+	</style>
+   
+    <style>
+	
+        body{
+            background:#fafafa;
+        }
+
+        .wrapper{
+            
+            padding:36px;
+            border:1px solid rgba(35, 89, 144, 0.48);
+            border-radius:6px;
+            -moz-border-radius:6px;
+            -webkit-border-radius:6px;
+            background:rgba(23, 34, 45, 0.33);
+            min-height:500px;
+        }
+       
+    </style>
+
+<div class="wrapper">
+
+    <div id="contact-wrapper" >
+
+      
+
+        <div class="form-wrapper">
+
+            <h2>للتواصل معنا</h2>
+<small>بالرجاء ترك رسالة</small>
+            <div class="message">
+                        </div>
+
+            <form id="contact-form" action="" method="post" novalidate="">
+
+                <fieldset>
+
+                    <div class="field">
+                        <label for="name">الاســــم</label>
+                        <input type="text" id="name" name="name" autofocus="" required="required">
+                    </div>
+
+                    <div class="field" title="">
+                        <label for="email">الايميــل</label>
+                        <input type="email" id="email" name="email" required="required">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">الهاتف/المحمول</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+
+                    <div class="field">
+                        <label for="contact_reason">مضمون الرسالة</label>
+                        <select id="contact_reason" name="contact_reason" required="required">
+                            <option></option>
+                            <option>اقترح</option>
+                            <option>طلب</option>
+                            <option>استفسار</option>
+                            <option>اخر</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">الرســـالة</label>
+                        <textarea id="message" name="message" cols="15" rows="5" required="required"></textarea>
+                    </div>
+
+                    <div class="field submit">
+                        <input type="submit" value="اتمم العملية">
+                    </div> 
+                </fieldset>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body></html>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<title>City</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<h2 class="w3-center">مشروع المدينة الزراعية المتكاملة</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://1.bp.blogspot.com/-IopvncuM-vY/WWqJd9QCFUI/AAAAAAAAAXM/LLlX5c8v_Wg3mRcJLnNi4zoJiDILuWe6wCLcBGAs/s320/test.png" style="width:100%">
+  <img class="mySlides" src="https://1.bp.blogspot.com/-UmLHbZj0pgo/WWqI2R_h5yI/AAAAAAAAAWk/XECikFHhdxA5XAcE_NRWeMke2Sa6umc2QCLcBGAs/s320/1.png" style="width:100%">
+  <img class="mySlides" src="https://3.bp.blogspot.com/-sFCqQnlBF4I/WWqI0qGC6lI/AAAAAAAAAWg/Lwc-SiezkqomML4a4RVyBKKveRtGxDQ2gCLcBGAs/s320/2.png" style="width:100%">
+  <img class="mySlides" src="https://4.bp.blogspot.com/-miYT_AgpUzo/WWqI4eUbsoI/AAAAAAAAAWo/bokrVdKHUWE_B1x4pWJZ2SlZHD5lu46dgCLcBGAs/s320/3.png" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<h2 class="w3-center">مشروع تغذية المدن بالكهرباء</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlide" src="https://4.bp.blogspot.com/-eTfESPAkdaU/WWqPnotTi-I/AAAAAAAAAXo/5mp2wtp_zGo-qvLKB3PhT_OC2K_GY91OACLcBGAs/s320/el.png" style="width:100%">
+  <img class="mySlide" src="https://2.bp.blogspot.com/-cTYltUH1-5U/WWqPiWc0VyI/AAAAAAAAAXk/wlC8hD3KR0gCkwOoxXPMhINW3upj8AzwgCLcBGAs/s1600/le.png" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDis(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDis(1)">&#10095;</button>
+</div>
+ 
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<script>
+var slideIndex = 1;
+showDis(slideIndex);
+
+function plusDis(n) {
+  showDis(slideIndex += n);
+}
+
+function showDis(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

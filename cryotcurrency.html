@@ -1,0 +1,104 @@
+<html>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<script type="text/javascript">
+
+	function hello() {
+		//
+		$("#jsonTable tr").remove();
+		$.getJSON("https://api.coinmarketcap.com/v1/ticker/", function(json) {
+			$('#jsonTable').css("visibility", "visible");//.css("border", "1px solid #330e0e");
+			$('#jsonTable').append("<tbody>");
+			$('#jsonTable').append("<tr> " 
+				+"<th> تعريف العملة</th>" 
++"<th>اسم العملة</th>" 
++"<th>رمز العملة</th>" 
++"<th>المتصدر</th>" 
++"<th>تبادل الدولار بالعملة</th>" 
++"<th>تبادل العملة بالدولار</th>" 
++"<th>24h_volume_usd</th>" 
++"<th>market_cap_usd</th>" 
++"<th>الدعم المتاح</th>" 
++"<th>اجمالى الدعم</th>" 
++"<th>اقصي دعم</th>" 
++"<th>نسبة التغير فى الساعة الاخيرة</th>" 
++"<th>نسبة التغير خلال 24 ساعة</th>" 
++"<th>نسبة التغير من 7 ايام</th>" 
++"<th>اخر تحديث</th>" 
+		+"	</tr>" );
+			for (var counter = 0; counter < json.length; counter++) {
+				$('#jsonTable').append("<tr><td>" 
+				+ json[counter].id + "</td><td>" + json[counter].name +
+                "</td><td>" + json[counter].symbol + "</td><td>" + json[counter].rank + 
+                 "</td><td>" + json[counter].price_usd +  "</td><td>" + json[counter].price_btc + 
+                  "</td><td>"  +  "</td><td>" + json[counter].market_cap_usd + 
+                   "</td><td>" + json[counter].available_supply +  "</td><td>" + json[counter].total_supply + 
+                    "</td><td>" + json[counter].max_supply +  "</td><td>" + json[counter].percent_change_1h +
+  "</td><td>" + json[counter].percent_change_24h +  "</td><td>" + json[counter].percent_change_7d +  "</td><td>" + json[counter].last_updated +					
+                    "</td></tr>");
+			}
+			$('#jsonTable').append("</tbody>");
+			$('th').css("border", "1px solid  #330e0e");
+		});
+	}
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+</head>
+<body style="background-color: #13526f;">
+	<input type="button" value="Render JSON" id="Render" onclick="return hello();"/>
+	<br/>
+	<table id="jsonTable"  >
+		<thead>
+			<tr>
+				<!-- The JSON downloaded from the URL above provides four attributes.-->
+			 
+			</tr>
+		</thead>
+	</table>
+	<style>
+#Render button {
+    background-color: #095273 !important;
+    border: 1px solid #2273ab !important;
+    color: white;
+    padding: 10px 24px !important;
+    cursor: pointer !important;
+    /* float: left; */
+}
+	td,  th {
+   /* border: 1px solid #ddd;*/
+    padding: 8px;
+}
+
+ tr:nth-child(even){background-color: #f2f2f2;}
+
+ tr:hover {background-color: #ddd;}
+
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    /*background-color: ;*/
+	    border: 1px solid rgb(23, 95, 136) !important;
+    color: #38c301;
+}
+tr:nth-child(even) {
+    background-color: #15405d;
+}
+tr:hover {
+    background-color: #065079bd;
+}
+button {
+    background-color: #095273;
+    border: 1px solid #2273ab;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    /* float: left; */
+}
+td  {
+    border: 1px solid #175f88;
+    padding: 8px;
+	color: #2a9ade;
+}</style>
+</body>
+</html>

@@ -1,0 +1,691 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>اختيار الصفحة</title>
+ 
+
+<style>
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px #4896ca; 
+    border-radius: 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #080f15; 
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #40aaff; 
+}
+ td,  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+ tr:nth-child(even){background-color: #f2f2f2;}
+
+ tr:hover {background-color: #ddd;}
+
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body style="
+    background-color: #13526f;
+">
+<table class="tableview" tabindex="1" cellspacing="3" data-target="#table-cell-menu" style="display: table;table-layout: auto;width: 100%;margin-left: 0px;border: #330e0e;"><colgroup>
+
+<col style="width: auto;"><col style="width: auto;"><col style="width: auto;"><col style="width: auto;"><col></colgroup>
+<tbody style="
+    color: #3d96cc;
+    border: #7b1a1a;
+">
+<tr>
+<td class="aux-cell aux-cell-corner"><span>
+<i class="icon-unchecked"></i></span></td>
+<td class="aux-cell aux-cell-column aux-cell-selected" data-target="#table-aux-col-menu"><span>A</span>
+<div class="size-handle" style="position: absolute; z-index: 10; top: 307px; left: 201.5px;"></div></td>
+<td class="aux-cell aux-cell-column aux-cell-selected" data-target="#table-aux-col-menu"><span>B</span>
+<div class="size-handle"></div></td>
+<td class="aux-cell aux-cell-column aux-cell-selected" data-target="#table-aux-col-menu"><span>C</span>
+<div class="size-handle"></div></td>
+<td class="aux-cell aux-cell-column aux-cell-selected" data-target="#table-aux-col-menu"><span>D</span>
+<div class="size-handle"></div></td>
+<td class="aux-cell aux-cell-column aux-cell-selected" data-target="#table-aux-col-menu"><span>E</span><div class="size-handle"></div></td>
+</tr>
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu" style="
+    color: red;
+"><span>1</span></td>
+<td class="" colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">لينك الصفحة</div></div></td>
+<td rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: middle;" colspan="1"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">اسم الصفحة</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: middle;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">اسم المبرمج المطور</div></div></td>
+<td class="" colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">كود فتح الصفحة بسرعة</div></div></td>
+<td class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">حالة الصفحة مكتملة/غير مكتملة</div></div></td>
+</tr>
+
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>2</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/login/rec.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">حجز التذاكر</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn1" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">R1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr>
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>3</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">/login/price.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">عملية الدفع</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn3" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N35</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">10%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>4</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">/pm/read_pm.php?id=1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">قراءة الرسائل</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn4" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N42</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr>
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>5</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/pm/new_pm.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">صفحة المراسلة</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn5" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N41</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>6</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/pm/edit_infos.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">تعديل بياناتك الشخصية</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn6" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N43</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">75%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>7</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;">/pm/profile.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;">الصفحة الشخصية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn7" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">85%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>8</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/profile.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;">الصفحة الرئيسية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: middle;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn8" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N33</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>9</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/allproject.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">عرض جميع المشروعات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn9" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N34</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>10</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P1.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">احصائيات الارباح السنوية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn10" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L17</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>11</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/yourinfo.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات المستخدم</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn11" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N38</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>12</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/n.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">الاصدقاء</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn12" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N32</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">85%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>13</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/inbox.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">الرسائل</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn13" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">N36</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>14</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P2.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">ادخال المبلغ</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn14" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L18</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">95%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>15</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P3.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اشتراك باستبيان</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn15" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L19</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">65%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>16</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P4.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اشتراك بمصنع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn16" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L20</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>17</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P5.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اشترك بقطعة ارض</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn17" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L21</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>18</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P23.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اشترك بمقترح</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn18" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F2</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">60%</div></div></td>
+</tr>
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>19</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P6.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اشترك باشياء اخرى</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn19" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L22</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">30%</div></div></td>
+</tr> 
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>20</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P7.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن المشروعات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn20" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L23</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>21</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P9.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن الموقع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn21" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L25</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">50%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>22</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P8.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن المنتجات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn22" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L24</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">60%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>23</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P16.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن رقمك الخاص بالبنك</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn23" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F3</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">80%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>24</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P9.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن الدفع الشهري</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn24" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L25</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">5%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>25</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P10.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن الخدمات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn25" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L26</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">30%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>26</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p17.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن بدء العمل</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn26" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F4</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">10%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>27</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P11.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن استخدام الموقع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn27" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L27</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">10%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>28</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p22.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلام عن الوظائف</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn28" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F5</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">14%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>29</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p18.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">استعلامات اخرى</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn29" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F6</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>30</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P12.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">جداول المشروعات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn30" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L28</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>31</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p19.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">جداول الارباح</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn31" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F7</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>32</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P13.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات سنوية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn32" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L29</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>33</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P14.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات الايداع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn33" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L30</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">85%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>34</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P15.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات السحب</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn34" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">L31</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>35</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p20.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات الاعضاء</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn35" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F8</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">85%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>36</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/p21.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات المشروعات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn36" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">F9</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">95%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>37</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/P24.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">بيانات التحويلات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn37" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">95%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>38</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A1.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">منقاصات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn38" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y2</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>39</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A2.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">مزادات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn39" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y3</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>40</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A3.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">عطاءات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn40" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y4</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>41</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A4.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">اعانات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn41" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y5</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>42</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A5.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">تموينات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn42" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y6</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>43</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/A6.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">تبرعات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn43" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y7</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">0%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>44</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/Add system.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">ادارة مدخلات الموقع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn44" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Y8</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">39%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>45</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project1.php</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">مشروع ري الاراضي</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn45" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>46</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project2.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع استصلاح اراضي</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn46" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P2</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>47</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project3.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع تحلية المياة</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn47" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P3</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>48</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project4.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الالات الزراعية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn48" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P4</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>49</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project5.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الدواجن</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn49" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P5</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>50</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project6.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الماشية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn50" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P6</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>51</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project7.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الابقار</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn51" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P7</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>52</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project8.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الاسماك</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn52" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P8</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>53</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project9.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع الخلايا الشمسية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn53" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">P9</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>54</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project10.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع تحويل السيارات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn54" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">Pr10</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>55</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project11.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع محركات الكهرباء</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn55" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr11</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>56</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project12.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع صنع هياكل المعدات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn56" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr12</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>57</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project13.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج الماكينات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn57" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr13</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>58</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project14.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع دعم المصانع</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn58" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr14</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>59</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project15.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع اسواق تابعة للبنك</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn59" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr15</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>60</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project16.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع تدوير المخلفات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn60" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr16</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>61</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project17.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع وحدات سكانية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn61" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr17</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>62</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project18.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج الاحذية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn62" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr18</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>63</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project19.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج الملابس</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn63" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr19</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>64</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project20.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مصانع انتاج اليات الكترونية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn64" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr20</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>65</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project21.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج مولدات الكترونية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn65" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr21</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>66</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project22.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج ملوثات البيئة</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn66" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr22</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>67</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project23.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع استخراج المواد الخام</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn67" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr23</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>68</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project24.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج الادوات المنزلية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn68" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr24</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>69</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project25.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع مقترح من الاعضاء</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn69" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr25</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>70</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project26.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع جمع المعادن</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn70" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr26</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>71</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project27.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع استنساخ المعدات وتطويرها</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn71" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr27</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>72</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project28.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج الاجهزة الالكترونية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn72" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr28</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>73</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project29.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع انتاج المركبات</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn73" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr29</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>74</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project30.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروع ماكينات البيع والشراء</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn74" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr30</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>75</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;">/login/project31.php</div></div></td>
+<td colspan="1" rowspan="1" class="" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">مشروعات الرفهاية</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn75" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class=""><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr31</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row aux-cell-selected" data-target="#table-aux-row-menu"><span>76</span></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class="selected"><div class="wrap"><div style="margin: 10px 5px;">/login/project32.php</div></div></td>
+<td colspan="1" rowspan="1" class="selected" style="display: table-cell; text-align: center; vertical-align: top;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">اقترح مشروع اساسيا</div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class="selected"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn76" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td colspan="1" rowspan="1" style="display: table-cell; text-align: center; vertical-align: top;" class="selected"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">Pr32</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr>
+<tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>77</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/coin.html</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">عملة ايبنك المستقبلية</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn77" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">Y9</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">20%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>78</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/city.html</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">عرض المشروعات</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn78" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J1</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">70%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>79</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/News.html</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">أخبار الموقع</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn79" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J2</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">30%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>80</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">/chatbot-master/demo/demo-ddg.html</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">روبوت للتحدث عن إيبنك</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn80" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J3</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">1%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>81</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/chat.html</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">ماسينجر إيبنك</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn81" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J4</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row" data-target="#table-aux-row-menu"><span>82</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;">/Page/h.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">صفحة التطوير لرفع ملفات</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn82" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J5</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">90%</div></div></td>
+</tr><tr>
+<td class="aux-cell aux-cell-row aux-cell-selected" data-target="#table-aux-row-menu"><span>83</span></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">/login/index.php</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false">صفحة الدخول المستخدمين</div></div></td>
+<td class="selected" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;"><button type="button" id="btn83" onclick="dosomething(this);">سأعمل على الصفحة</button></div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">J6</div></div></td>
+<td class="" style="text-align: center;"><div class="wrap"><div style="margin: 10px 5px;">85%</div></div></td>
+
+</tr></tbody>
+
+
+</table>
+
+<style>
+tr:nth-child(even) {
+    background-color: #15405d;
+}
+tr:hover {
+    background-color: #065079bd;
+}
+button {
+    background-color: #095273;
+    border: 1px solid #2273ab;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    /* float: left; */
+}
+td, th {
+    border: 1px solid #175f88;
+    padding: 8px;
+}</style>
+
+<script type="text/javascript">
+    function dosomething(source){
+        // Trigger the id of the element that was clicked
+        alert(source.id);
+    }
+</script>
+
+</body></html>
