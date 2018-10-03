@@ -1,0 +1,324 @@
+<?php
+ob_start();
+	session_start();
+	require_once 'dbconnect.php';
+	
+	// if session is not set this will redirect to login page
+	if( !isset($_SESSION['user']) ) {
+		header("Location: index.php");
+		exit;
+	}
+	// select loggedin users detail
+	$res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
+	$userRow=mysql_fetch_array($res);
+
+$link = mysql_connect("mysql.hostinger.in", "u856423732_egyba", "9874123951753");
+mysql_select_db("u856423732_bank", $link);
+
+$result = mysql_query("SELECT count (*) FROM len");
+
+
+
+?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>احجز تذكرتك</title>
+
+<script type="text/javascript" src="scroll/js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="scroll/js/jquery.scrollTo.js"></script>
+  <!-- Bootstrap -->
+    <link href="https://colorlib.com/polygon/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://colorlib.com/polygon/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="http://ebank.esy.es/login/Gentallela Alela! __files/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="http://ebank.esy.es/login/Gentallela Alela! __files/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- jVectorMap -->
+    <link href="http://ebank.esy.es/login/Gentallela Alela! __files/jquery-jvectormap-2.0.3.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="http://ebank.esy.es/login/Gentallela Alela! __files/custom.min.css" rel="stylesheet">
+	
+	
+<script>
+
+$(document).ready(function() {
+
+	$('a.panel').click(function () {
+
+		$('a.panel').removeClass('selected');
+		$(this).addClass('selected');
+		
+		current = $(this);
+		
+		$('#wrapper').scrollTo($(this).attr('href'), 800);		
+		
+		return false;
+	});
+
+	$(window).resize(function () {
+		resizePanel();
+	});
+	
+});
+
+function resizePanel() {
+
+	width = $(window).width();
+	height = $(window).height();
+
+	mask_width = width * $('.item').length;
+		
+	$('#debug').html(width  + ' ' + height + ' ' + mask_width);
+		
+	$('#wrapper, .item').css({width: width, height: height});
+	$('#mask').css({width: mask_width, height: height});
+	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+		
+}
+
+</script>
+
+<style>
+
+body {
+	height:100%;
+	width:100%;
+	margin:0;padding:0;
+	overflow:hidden;
+}
+
+#wrapper {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;left:0;
+	background-color:#ccc;
+	overflow:hidden;
+}
+
+	#mask {
+		width:500%;
+		height:100%;
+		background-color:#eee;
+	}
+
+	.item {
+		width:20%;
+		height:100%;
+		float:left;
+		background-color:#ddd;
+	}
+	
+	
+	.content0000 {
+		width:550px;
+		height:100%;
+		top:0%;
+		margin:0 auto;
+		background-color:#F7F7F7;
+		position:relative;
+	}
+
+	.content000 {font-size: 22px;height: 200px; width: 390px;left: 10px;top:0%; margin-left: 0px;background-color:#F7F7F7;position: absolute;}
+	.content00 {font-size: 22px;height: 200px; width: 390px;left: 10px;top:0%; margin-left: 960px;background-color:#F7F7F7;position: absolute;}
+	.content0 {font-size: 22px;height: 200px; width: 390px;left: 10px;top:220px; margin-left: 0px;background-color:#F7F7F7;position: absolute;}
+	.content01 {font-size: 22px;height: 200px; width: 390px;left: 10px;top:220px; margin-left: 960px;background-color:#F7F7F7;position: absolute;}
+	
+	
+	.selected {
+		background:#fff;
+		font-weight:700;
+	}
+
+	.clear {
+		clear:both;
+	}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="mask">
+
+		<div id="item1" class="item">
+			<div class="content000"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">عدد التذاكر الحالية<i class="fa fa-user"></i></span>
+              <div class="count"><?php echo $result; ?></div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>0% </i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			
+			<div class="content00"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">عدد الاعضاء<i class="fa fa-user"></i></span>
+              <div class="green">000000</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>0% </i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			<div class="content0"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">عدد التذاكر المحجوزه<i class="fa fa-newspaper-o"></i></span>
+              <div class="green">000000</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i> %0</i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			
+			<div class="content0" style="
+    top: 450px;
+    height: 150px;
+"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">ثمن التذكرة البريموا<i class="fa fa-newspaper-o"></i></span>
+              <div class="green">جنية 110</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i> %0</i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			
+			<div class="content0"style="
+    top: 450px;
+    height: 150px;
+    right: 0px;
+    left: 970px;
+"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">ثمن التذكرة العادية<i class="fa fa-newspaper-o"></i></span>
+              <div class="green">55 جنية</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i> %0</i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			<div class="content01"> 
+		 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" style="width: 320px;left: 50px;top: 50px;">
+		 
+              <span class="count_top">عدد المشروعات<i class="fa fa-user"></i></span>
+              <div class="green">0032</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>0% </i> من الاسبوع الماضي</span>
+            </div>
+			</div>
+			
+			<div class="content0000"> 
+				<a href="#item1" class="panel">1</a> | 
+				<a href="#item2" class="panel">2</a> صفحة
+			
+				 <!-- page content -->
+        <div class="right_col" role="main" style="
+    margin-left: 15px;
+    margin-right: 15px;
+">          <!-- top tiles -->
+          <div class="x_panel">
+                  <div class="x_title">
+                    <h2>حجز تذكرة <small>عدد التذاكر</small></h2>
+					<div class="clearfix"></div>
+                  </div>
+                  <div class="x_content" style="display: block;">
+                    <br>
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" required="required" placeholder="اسمـــك">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess3" required="required" placeholder="اسـم العائلة">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" required="required" placeholder="الايميــل">
+                        <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess5" required="required" placeholder="الهاتــف/المحمول">
+                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="form-group"> 
+					  <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" required="required" placeholder="أدخل سكنك">
+                        </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">منطقة السكن</label>
+                       
+                      </div>
+                      <div class="form-group">
+					   <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" readonly="readonly" required="required" placeholder="هذا هو التعريف الخاص بك">
+                        </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">التعريف الخاص بك </label>
+                       
+                      </div>
+					  <div class="form-group">
+					   <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" disabled="disabled" required="required" placeholder="رقم البنك الخاص بك">
+                        </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">رقم البنك الخاص بك</label>
+                       
+                      </div>
+                      <div class="form-group">
+					  <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" required="required" placeholder="ادخل البطاقة الشخصية">
+                        </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">البطاقة الشخصية</label>
+                        
+                      </div>
+                      <div class="form-group">
+					  <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">تاريخ الميلاد <span class="required">*</span>
+                        </label>
+                        
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">الغاء</button>
+                          <button type="submit" class="btn btn-success">احجز</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+            </div>
+        
+			</div>
+			
+			
+			<a name="item1"></a>
+		</div>
+		
+		<div id="item2" class="item">
+			<a name="item2"></a>
+			<div class="content0000">الصفة الثانية <a href="#item1" class="panel">رجوع</a></div>
+		</div>
+		
+	</div>
+</div>
+     <script src="./Gentallela Alela! __files/codepg.js"></script>
+<div class="sidebar-footer1 hidden-small" style="left: 100px;">         
+         
+<input name="firstname" type="text" id="c" style="background: white;width: 45%;" onkeyup="convert()" value="" placeholder="أدخل كود الصفحة">
+<input type="text" name="lastname" id="f" style="visibility:hidden">
+ <a name="ty">سطر أوامر الموقع :</a>
+<style>
+#c {width:45%;position:fixed;}
+#ty{position:fixed;}
+</style>     </div>
+</body>
+</html>
