@@ -1,0 +1,294 @@
+<div height="100%" width="100%" frameborder="0" scrolling="no" >
+    <html>
+<!DOCTYPE html >
+  <head>
+  <link rel="icon" href="http://icons.iconarchive.com/icons/janosch500/tropical-waters-folders/24/Safari-icon.png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Using MySQL and PHP with Google Maps</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400pX;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+#coords {
+        background-color: #f4f4f5;
+        color: rgba(68, 122, 128, 0.88);
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="map"></div>
+	<div id="coords"></div>
+    <script charset="UTF-8">
+      var customLabel = {
+        restaurant: {
+          label: 'R'
+        },
+        bar: {
+          label: 'F'
+        }
+      };
+	  var searchBox;
+      var curposdiv;
+//initAutocomplete()
+//initMap()
+        function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(30.5, 31),
+          zoom: 8
+
+        });
+
+       // Show the lat and lng under the mouse cursor.
+        var coordsDiv = document.getElementById('coords');
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(coordsDiv);
+        map.addListener('mousemove', function(event) {
+          coordsDiv.textContent =
+              'lat: ' + event.latLng.lat() + ', ' +
+              'lng: ' + event.latLng.lng();
+        });   
+        var infoWindow = new google.maps.InfoWindow;
+
+          // Change this depending on the name of your PHP or XML file
+        //downloadUrl('http://localhost/dashboard/mapmarkers2.xml', function(data) {
+		  downloadUrl('http://ebank.esy.es/mapmarkers2.xml', function(data) {
+            var xml = data.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+              var name = markerElem.getAttribute('name');
+              var address = markerElem.getAttribute('address');
+              var type = markerElem.getAttribute('type');
+              var point = new google.maps.LatLng(
+                  parseFloat(markerElem.getAttribute('lat')),
+                  parseFloat(markerElem.getAttribute('lng')));
+
+              var infowincontent = document.createElement('div');
+              var strong = document.createElement('strong');
+              strong.textContent = name
+              infowincontent.appendChild(strong);
+              infowincontent.appendChild(document.createElement('br'));
+
+              var text = document.createElement('text');
+              text.textContent = address
+              infowincontent.appendChild(text);
+              var icon = customLabel[type] || {};
+              var marker = new google.maps.Marker({
+                map: map,
+                position: point,
+                label: icon.label
+              });
+              marker.addListener('click', function() {
+                infoWindow.setContent(infowincontent);
+                infoWindow.open(map, marker);
+              });
+            });
+          });
+
+
+
+
+// Construct the circle for each value in citymap.
+        // Note: We scale the area of the circle based on the population.
+        for (var city in citymap) {
+          // Add the circle for this city to the map.
+          var cityCircle = new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: citymap[city].center,
+            radius: Math.sqrt(citymap[city].population) * 2
+			
+          });
+		  
+        }
+		
+var myLatLng = {lat: 30.5, lng: 29.4};
+			  var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+			
+var rectangle = new google.maps.Rectangle({
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+          map: map,
+          bounds: {
+            north: 31.685,
+            south: 30.671,
+            east: 31.234,
+            west: 30.251
+          }
+        });
+
+
+   var triangleCoords = [
+          {lat: 31.774, lng: 30.190},
+          {lat: 31.466, lng: 30.118},
+          {lat: 31.321, lng: 30.757}
+        ];
+
+         bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 3,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35
+        });
+        
+  bermudaTriangle.setMap(map);
+
+
+
+
+       var drawingManager = new google.maps.drawing.DrawingManager({
+          drawingMode: null,
+          drawingControl: true,
+          drawingControlOptions: {
+            position: google.maps.ControlPosition.TOP_CENTER,
+            drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
+          },
+          markerOptions: {icon: 'http://icons.iconarchive.com/icons/janosch500/tropical-waters-folders/24/Documents-icon.png'},
+         
+		 
+		  rectangleOptions: {
+            strokeColor: '#FF0000',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#FF0000',
+          fillOpacity: 0.35,
+         
+          clickable: true,
+          editable: true,
+          zIndex: 1
+        }
+		
+         });
+        
+       drawingManager.setMap(map);
+
+        }
+
+
+      
+
+      function downloadUrl(url, callback) {
+        var request = window.ActiveXObject ?
+            new ActiveXObject('Microsoft.XMLHTTP') :
+            new XMLHttpRequest;
+
+        request.onreadystatechange = function() {
+          if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request, request.status);
+          }
+        };
+
+        request.open('GET', url, true);
+        request.send(null);
+      }
+
+      function doNothing() {}
+
+
+
+
+
+
+      // This example creates circles on the map, representing populations in North
+      // America.
+
+      // First, create an object containing LatLng and population for each city.
+      var citymap = {
+        chicago: {
+          center: {lat: 30.878, lng: 31.629},
+          population: 2714856
+        },
+        newyork: {
+          center: {lat: 30.714, lng: 30.005},
+          population: 8405837
+        },
+        losangeles: {
+          center: {lat: 29.052, lng: 30.243},
+          population: 3857799
+        },
+        vancouver: {
+          center: {lat: 31.25, lng: 31.1},
+          population: 603502
+        }
+      };
+
+
+
+
+
+
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_2ubXPtaZCXzPvQbiR0rj40DjE28sH3o&libraries=drawing&callback=initMap">
+
+    </script>
+  </body>
+</html>
+</div>
+
+<?php
+
+// Script by Fred Fletcher, Canada.
+
+$fname = "10";
+$lname = "10";
+$location = "10";
+$report = "10";
+$description = "10";
+
+$xml = new DOMDocument('1.0', 'utf-8');
+$xml->formatOutput = true;
+$xml->preserveWhiteSpace = false;
+$xml->load('mapmarkers2.xml');
+
+$element = $xml->getElementsByTagName('reports')->item(0);
+
+$timestamp = $element->getElementsByTagName('timestamp')->item(0);
+$fname = $element->getElementsByTagName('fname')->item(0);
+$lname = $element->getElementsByTagName('lname')->item(0);
+$location = $element->getElementsByTagName('location')->item(0);
+$report = $element->getElementsByTagName('report')->item(0);
+$description = $element->getElementsByTagName('description')->item(0);
+
+$newItem = $xml->createElement('reports');
+
+$newItem->appendChild($xml->createElement('timestamp', date("F j, Y, g:i a",time())));;
+
+$newItem->appendChild($xml->createElement('fname', "10"));
+$newItem->appendChild($xml->createElement('lname', "15"));
+$newItem->appendChild($xml->createElement('location', "15"));
+$newItem->appendChild($xml->createElement('report', "15"));
+$newItem->appendChild($xml->createElement('description', "15"));
+
+$xml->getElementsByTagName('entries')->item(0)->appendChild($newItem);
+
+$xml->save('mapmarkers2.xml');
+
+echo "Data has been written.";
+
+?>
