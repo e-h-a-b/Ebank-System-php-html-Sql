@@ -1,0 +1,22 @@
+_req304({
+    "avatar": "https://avatars.githubusercontent.com/u/2862724?s=160",
+    "elsewhere": {
+        "github": {
+            "id": 297582,
+            "user_id": "2862724",
+            "user_name": "ramswaroop"
+        },
+        "google": {
+            "id": 544821,
+            "user_id": "116451248863339245449",
+            "user_name": "RamswaroopPatra"
+        }
+    },
+    "giving": "0.00",
+    "id": 237470,
+    "ngiving_to": 0,
+    "ntaking_from": 2,
+    "on": "gratipay",
+    "taking": "0.10",
+    "username": "ramswaroop"
+})
