@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<markers>
+    <marker id="1" name="el roba2y" address="&#1575;&#1585;&#1590;&#1610; &#1605;&#1581;&#1605;&#1608;&#1583; &#1575;&#1604;&#1585;&#1576;&#1575;&#1593;&#1609;" lat="30.5" lng="31" type="restaurant" />
+    <marker id="2" name="el hag bin sayid" address="580 Darling Street, Rozelle, NSW" lat="30.9" lng="31" type="restaurant" />
+    <marker id="3" name="Dr.Ahmed mansour" address="76 Wilford Street, Newtown, NSW" lat="30.4" lng="31" type="bar" />
+    <marker id="4" name="el hag ali " address="ارضي الحاج صابر وعم دهشور" lat="30" lng="31.207474" type="bar" />
+    <marker id="5" name="shery &#1575;&#1585;&#1590;&#1610;" address="7A, 2 Huntley Street, Alexandria, NSW" lat="30.910751" lng="31.194168" type="bar" />
+    <marker id="6" name="&#1605;&#1581;&#1605;&#1583; &#1576;&#1606; &#1575;&#1604;&#1581;&#1575;&#1580; &#1587;&#1593;&#1610;&#1583;" address="16 Foster Street, Surry Hills, NSW" lat="30.879917" lng="31.210449" type="bar" />
+    <marker id="7" name="&#1575;&#1604;&#1593;&#1605;&#1583;&#1577; &#1576;&#1606; &#1593;&#1604;&#1609;" address="43 Macpherson Street, Bronte, NSW" lat="30.906357" lng="31.263763" type="restaurant" />
+    <marker id="8" name="&#1575;&#1604;&#1581;&#1575;&#1580; &#1593;&#1576;&#1583;&#1577; &#1575;&#1604;&#1576;&#1602;&#1575;&#1604;" address="60-64 Reservoir Street, Surry Hills, NSW" lat="30.881123" lng="31.209656" type="restaurant" />
+    <marker id="9" name="&#1606;&#1593;&#1606;&#1575;&#1606;&#1577; &#1604;&#1604;&#1578;&#1580;&#1575;&#1585;&#1577;" address="60 Riley Street, Darlinghurst, NSW" lat="30.874737" lng="31.215530" type="restaurant" />
+</markers>
