@@ -1,0 +1,20 @@
+page http://ebank.esy.es/login/yourinfo.php
+
+
+css
+
+.x_title {
+    border-bottom: 2px solid rgb(118, 173, 228) !important;
+    padding: 1px 5px 6px;
+    margin-bottom: 10px;
+}
+
+html 
+
+------
+
+
+js
+
+
+------
